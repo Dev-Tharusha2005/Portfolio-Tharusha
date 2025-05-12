@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suhansa Tharusha | Developer</title>
+  <link rel="icon" >
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000000;
+      color: white;
+     
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000000;
+      padding: 25px 30px;
+      flex-wrap: wrap;
+      font-weight: bold;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: orangered;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: orangered;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: rgb(255, 110, 57);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: orangered;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background-color: #000000;
+        margin-top: 10px;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* HOME Section */
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; /* changed from center to flex-start */
+  min-height: auto; /* or reduce from 100vh to something like 70vh */
+  padding: 60px 90px 30px; /* add more top padding if needed */
+  background-color: #000000;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  flex: 1;
+  color: orangered;
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+}
+
+.home-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.home-text p {
+  font-size: 22px;
+  line-height: 1.8;
+  color: orangered;
+}
+
+.home-text button {
+  margin-top: 30px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home-text button:hover {
+  background-color: rgb(255, 94, 0);
+}
+
+.home-image {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .home-text h1 {
+    font-size: 32px;
+  }
+
+  .home-text p {
+    font-size: 18px;
+  }
+
+  .home-text button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+
+  /* SERVICES Section */
+  .services {
+    background-color: #0a0a0a;
+    padding: 60px 30px;
+    text-align: center;
+  }
+
+  .services h2 {
+    font-size: 36px;
+    color: orangered;
+    margin-bottom: 40px;
+  }
+
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .service-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 300px;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .service-card h3 {
+    font-size: 22px;
+    color: orangered;
+    margin-bottom: 15px;
+  }
+
+  .service-card p {
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .services h2 {
+      font-size: 28px;
+    }
+
+    .service-card {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+
+
+  /* ABOUT Section */
+.about {
+  background-color: #0a0a0a;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: orangered;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-text {
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about-text ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-text ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+}
+
+
+/* SKILLS Section */
+.skills {
+  background-color: #0a0a0a;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 36px;
+  color: orangered;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill-box {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 25px 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+}
+
+.skill-box h3 {
+  color: orangered;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.skill-box ul {
+  list-style-type: square;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.skill-box ul li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 28px;
+  }
+
+  .skill-box {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* CONTACT Section */
+.contact {
+  background-color: #0a0a0a;
+  padding: 60px 30px;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  color: orangered;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+  text-align: left;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+}
+
+.contact-info a {
+  color: orangered;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.contact-form button {
+  background-color: orangered;
+  color: white;
+  padding: 14px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: rgb(255, 94, 0);
+}
+
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 100%;
+  }
+}
+
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer p {
+  margin-bottom: 10px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: orangered;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">THARUSHA</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SERVICES</a>
+      <a href="#">SKILL</a>
+      <a href="#">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1>Hello, I'm Suhansa Tharusha</h1>
+      <p>I'm Suhansa Tharusha, a final-year BEng (Hons) Software Engineering undergraduate at the Java Institute for Advanced Technology.</p>
+      <button onclick="window.location.href='#contact'">Contact Me</button>
+    </div>
+    <div class="home-image">
+      <img src="prof.png" alt="Suhansa Tharusha">
+    </div>
+  </section>
+
+
+  <!-- ABOUT ME SECTION -->
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          I'm <strong>Suhansa Tharusha</strong>, a final-year BEng (Hons) Software Engineering undergraduate at the Java Institute for Advanced Technology. My degree is awarded by IIC University of Technology.
+        </p>
+        <p>
+          I specialize in full-stack development, including:
+        </p>
+        &nbsp;<ul>
+          <li>Web development with HTML, CSS, JavaScript, PHP, Java Servlets, MySQL, and GlassFish</li>
+          <li>Desktop software development with Java and MySQL</li>
+          <li>Mobile app development using Java, Android, Firebase, and MySQL</li>
+        </ul>
+        <p>
+          Passionate about building reliable, user-friendly systems that solve real-world problems.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- SERVICES SECTION -->
+<section class="services" id="services">
+    <h2>My Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Web Application Development</h3>
+        <p>Designing and developing responsive web applications using HTML, CSS, JavaScript, PHP, Java (Servlets), MySQL, and GlassFish Server.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mobile App Development</h3>
+        <p>Building Android applications using Java, with Firebase and MySQL for backend integration and data management.</p>
+      </div>
+      <div class="service-card">
+        <h3>Software Application Development</h3>
+        <p>Creating robust Java-based desktop applications with MySQL database support tailored to business needs.</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- SKILL SECTION -->
+<section class="skills" id="skill">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-box">
+        <h3>Web Application Development</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>Java (Servlets)</li>
+          <li>MySQL</li>
+          <li>GlassFish</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Software Development</h3>
+        <ul>
+          <li>Java (Desktop Applications)</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Mobile App Development</h3>
+        <ul>
+          <li>Java (Android)</li>
+          <li>Firebase</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Tools & Platforms</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>GlassFish Server</li>
+          <li>Android Studio</li>
+          <li>NetBeans IDE</li>
+          <li>IntelliJ IDEA</li>
+          <li>VS/ VS Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><strong>Email:</strong> suhansa******@gmail.com</p>
+        <p><strong>Email:</strong> tharusha*******gmail.com</p>
+        <p><strong>Phone:</strong> +94 77023****</p>
+        <p><strong>Location:</strong> NuwaraEliya, Sri Lanka</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/suhansa-tharusha-11104a298/" target="_blank">linkedin.com/in/suhansatharusha</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Dev-Tharusha2005" target="_blank">github.com/suhansatharusha</a></p>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent!');">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Suhansa Tharusha. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    
+  </footer><hr>
+  
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+  </script>
+
+</body>
+</html>
